@@ -187,8 +187,11 @@ export class Chat extends React.Component<ChatProps, {}> {
         this.shellRef = shellWrapper && shellWrapper.getWrappedInstance();
     }
 
-    onDragOver() {
+    onDragOver(e : Event) {
         console.log('DragOver');
+        let event = e as Event;
+        event.stopPropagation();
+        event.preventDefault();
     }
 
     onDrop(ev: any) {
@@ -321,8 +324,8 @@ export class Chat extends React.Component<ChatProps, {}> {
                 <div
                     className="wc-chatview-panel"
                     onKeyDownCapture={ this._handleKeyDownCapture }
-                    onDragOverCapture = {this._handleDragOver}
-                    onDropCapture = {this._handleOnDrop}
+                    onDragOver = {this._handleDragOver}
+                    onDrop = {this._handleOnDrop}
                     ref={ this._saveChatviewPanelRef }
                 >
                     {
