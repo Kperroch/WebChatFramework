@@ -321,8 +321,8 @@ export class Chat extends React.Component<ChatProps, {}> {
                 <div
                     className="wc-chatview-panel"
                     onKeyDownCapture={ this._handleKeyDownCapture }
-                    onDragOver = {this._handleDragOver}
-                    onDrop = {this._handleOnDrop}
+                    onDragOverCapture = {this._handleDragOver}
+                    onDropCapture = {this._handleOnDrop}
                     ref={ this._saveChatviewPanelRef }
                 >
                     {
