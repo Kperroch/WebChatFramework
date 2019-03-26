@@ -17,12 +17,5 @@ test/interfaces_sdk.js*
 npm
 cdn
 webpacked
-botchat.js
-botchat.js.map
-botchat-es5.js
-botchat-es5.js.map
-CognitiveServices.js
-CognitiveServices.js.map
-*.css
 /test/uploads
 .env
