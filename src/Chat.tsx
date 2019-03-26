@@ -187,9 +187,9 @@ export class Chat extends React.Component<ChatProps, {}> {
         this.shellRef = shellWrapper && shellWrapper.getWrappedInstance();
     }
 
-    onDragOver(e : Event) {
+    onDragOver(e: Event) {
         console.log('DragOver');
-        let event = e as Event;
+        const event = e as Event;
         event.stopPropagation();
         event.preventDefault();
     }

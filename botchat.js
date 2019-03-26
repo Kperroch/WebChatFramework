@@ -3970,8 +3970,11 @@ var Chat = (function (_super) {
     Chat.prototype.saveShellRef = function (shellWrapper) {
         this.shellRef = shellWrapper && shellWrapper.getWrappedInstance();
     };
-    Chat.prototype.onDragOver = function () {
+    Chat.prototype.onDragOver = function (e) {
         console.log('DragOver');
+        var event = e;
+        event.stopPropagation();
+        event.preventDefault();
     };
     Chat.prototype.onDrop = function (ev) {
         // Now that we're mounted, we know our dimensions. Put them in the store (this will force a re-render)

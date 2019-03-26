@@ -45,7 +45,7 @@ export declare class Chat extends React.Component<ChatProps, {}> {
     private saveChatviewPanelRef(chatviewPanelRef);
     private saveHistoryRef(historyWrapper);
     private saveShellRef(shellWrapper);
-    onDragOver(): void;
+    onDragOver(e: Event): void;
     onDrop(ev: any): void;
     componentDidMount(): void;
     componentWillUnmount(): void;
